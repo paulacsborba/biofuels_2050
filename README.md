@@ -14,22 +14,23 @@ The framework co-optimizes energy supply, conversion, storage, and transport acr
 
 ## Model Scope
 ### Sectors included
-Light-duty vehicles (LDV)
-Heavy-duty vehicles (HDV)
-Aviation
-Shipping
-Rail
-Industry
+- Light-duty vehicles (LDV)
+- Heavy-duty vehicles (HDV)
+- Aviation
+- Shipping
+- Rail
+- Industry
+- Buildings
 
 ### Energy carriers
-Electricity
-Hydrogen
-Ethanol (1G and 2G)
-Biodiesel / HVO
-Sustainable Aviation Fuel (SAF)
-E-kerosene and e-methanol
-Ammonia
-E-diesel
+- Electricity
+- Hydrogen
+- Ethanol (1G and 2G)
+- Biodiesel / HVO
+- Sustainable Aviation Fuel (SAF)
+- E-kerosene and e-methanol
+- Ammonia
+- E-diesel
 
 The model explicitly represents cross-sectoral interactions, enabling competition between electrification, biofuels, and synthetic fuels.
 
@@ -38,19 +39,19 @@ The model explicitly represents cross-sectoral interactions, enabling competitio
 A dedicated bioenergy subsystem is developed based on original work, with the following features:
 
 ### Feedstocks and conversion
-Sugarcane or corn → ethanol (1G and 2G pathways)
-Soybean → biodiesel / HVO
-Ethanol → SAF and e-fuels (indirect pathways)
+- Sugarcane or corn → ethanol (1G and 2G pathways)
+- Soybean → biodiesel / HVO
+- Ethanol → SAF and e-fuels (indirect pathways)
 
 ### Spatial differentiation
-Production zones classified by high, medium, and low suitability
-Region-specific technologies and yields
-Land-use constraints
-Explicit available area constraints per region
-Multiple land regimes implemented via overrides:
-Full potential
-Conservation + SIGEF restrictions
-Direct linkage between land availability and biofuel production capacity
+- Production zones classified by high, medium, and low suitability
+- Region-specific technologies and yields
+- Land-use constraints
+- Explicit available area constraints per region
+- Multiple land regimes implemented via overrides:
+- Full potential
+- Conservation + SIGEF restrictions
+- Direct linkage between land availability and biofuel production capacity
 
 These constraints are implemented through scenario-dependent parameters such as _available_area_.
 
@@ -62,25 +63,25 @@ The model is modular and organized into:
 
 Defined in separate YAML files:
 
-Conversion (biofuels, hydrogen, PtX)
-Storage (CO₂, hydrogen, fuels)
-Transport (pipelines, shipping, electricity transmission)
-Demand (sector-specific)
-Locations: high spatial resolution (state-level zones, e.g., MG_Z1, SP_Z2)
-Differentiated by resource quality (high/medium/low)
-Resampled time series (e.g., 360h resolution)
+- Conversion (biofuels, hydrogen, PtX)
+- Storage (CO₂, hydrogen, fuels)
+- Transport (pipelines, shipping, electricity transmission)
+- Demand (sector-specific)
+- Locations: high spatial resolution (state-level zones, e.g., MG_Z1, SP_Z2)
+- Differentiated by resource quality (high/medium/low)
+- Resampled time series (e.g., 360h resolution)
 
 ### Config.:
-Linear optimization using Gurobi
-Cost-minimization objective (monetary)
-Includes:
-Capacity expansion
-Dispatch optimization
-Storage dynamics (cyclic storage enabled)
-Exploration of near-optimal solutions
+- Linear optimization using Gurobi
+- Cost-minimization objective (monetary)
+*Includes:*
+- Capacity expansion
+- Dispatch optimization
+- Storage dynamics (cyclic storage enabled)
+- Exploration of near-optimal solutions
 
 The model uses SPORES (Spatially-explicit Practically Optimal REsults) to explore alternative system configurations:
 
-Multiple near-optimal solutions
-Cost slack (e.g., 10–20%)
-Diversity of pathways beyond the single optimum
+- Multiple near-optimal solutions
+- Cost slack (e.g., 10–20%)
+- Diversity of pathways beyond the single optimum
