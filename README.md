@@ -1,4 +1,4 @@
-# Brazil Bioenergy–Energy System Model (Calliope)
+# Brazil Energy System Model (Calliope)
 ## Overview
 
 This repository contains a national-scale energy system optimization model for Brazil developed using Calliope. The model focuses on the integration of bioenergy, land-use constraints, and emerging fuels into long-term energy planning.
