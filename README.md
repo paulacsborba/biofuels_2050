@@ -5,11 +5,11 @@ This repository contains a national-scale energy system optimization model for B
 
 The framework co-optimizes energy supply, conversion, storage, and transport across multiple sectors, with a particular emphasis on biofuel production pathways and their interaction with land availability and sustainability constraints.
 
-## The model is designed for:
+## The model is designed for
 
--Item Long-term energy planning // 
--Item Policy analysis (land use, decarbonization pathways) //
--Item Academic research on energy–land–climate interactions 
+- **Long-term energy planning**  
+- **Policy analysis** (land use, decarbonization pathways)  
+- **Academic research** on energy–land–climate interactions  
 
 
 ## Model Scope
